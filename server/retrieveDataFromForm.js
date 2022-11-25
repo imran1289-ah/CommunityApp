@@ -1,4 +1,7 @@
-const first_name = document.getElementById("first_name").value;
+
+const first_name = fetch('./database.json')
+.then((response) => response.json().then(first_name == f))
+
 const last_name = document.getElementById("last_name").value;
 const age = document.getElementById("age").value;
 const job_type = document.getElementById("job_type").value;

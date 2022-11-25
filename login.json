@@ -1,0 +1,24 @@
+{
+    "users": [{
+            "fname": "admin",
+            "lname": "admin",
+            "email": "admin@admin.com",
+            "password": "admin"
+        },
+        {
+            "fname": "Adamo",
+            "lname": "Orsini",
+            "email": "adamo.12@hotmail.com",
+            "password": "123"
+        }
+
+    ],
+    "employers": {
+
+        "fname": "Jimbo",
+        "lname": "McBimbo",
+        "email": "me@you.com",
+        "password": "woopee"
+
+    }
+}

@@ -6,7 +6,6 @@
             "age": "22",
             "jobTitle": "xzf",
             "resume": "resume.pdf"
-
         },
         {
             "fname": "admin",
@@ -15,8 +14,14 @@
             "age": "22",
             "jobTitle": "xzf",
             "resume": "resume.pdf"
-
+        },
+        {
+            "fname": "test",
+            "lname": "test",
+            "email": "test@test.com",
+            "age": "22",
+            "jobTitle": "SDE",
+            "resume": "resume_new.pdf"
         }
-
     ]
 }

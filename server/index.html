@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      function isEmployer(){
+        let condition = localStorage.getItem("LoggedIn");
+        if (condition == 2){
+          window.location.href = "viewresume.html"
+        }
+        else{
+          alert("You are not authorized to access this");
+        }
+      }
+    </script>
+    <title>Home Page</title>
+  </head>
+  <style>
+    h1 {text-align: center;}
+  </style>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        
+        <a class="navbar-brand" href="#"><img src="https://e7.pngegg.com/pngimages/744/159/png-clipart-round-multi-color-logo-color-wheel-computer-icons-rgb-color-space-colour-logo-color.png" alt="Bootstrap" width="30" height="24">Social Community Platform</a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="login.html">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Jobs and Volunteering Oppurtunities</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" onclick="isEmployer();">View Resume</a>
+              </li>
+            
+            
+          </form>
+        </div>
+      </div>
+    </nav>
+    <h1>Job and Volunteering Section</h1>
+    <br/>
+    
+    <div class="container px-4 text-center">
+        <div class="row gx-5">
+          <div class="col">
+           <div class="p-3 border bg-light">
+            <img src="https://png.pngtree.com/png-clipart/20220726/original/pngtree-letter-m-logo-png-png-image_8412439.png" alt="Blueworks" width="30" height="30">
+            <br/>
+            <u><b>Job Tile</b></u> 
+            <br/>
+            Student Front End Developper
+            <br/>
+            <br/>
+            <u><b>Company</b></u>
+            <br/>
+            Marain High School
+            <br/>
+            <br/>
+            <u><b>Job Type</b></u> 
+            <br/>
+            Remote
+            <br/>
+            <br/>
+            <u><b>Description</b></u> 
+            <br/>
+            The candiate will help build the Marian High School Website. Candidate is expected to have good skills in HTML,CSS and JavaScript.
+            <br/>
+            <br/>
+            <a href="test.html"><button type="button" class="btn btn-primary">Apply</button></a>
+           </div>
+           
+          </div>
+          <div class="col">
+           
+            <div class="p-3 border bg-light">
+            <img src="https://png.pngtree.com/png-clipart/20220726/original/pngtree-letter-m-logo-png-png-image_8412439.png" alt="Marian" width="30" height="30">
+            <br/>
+            <u><b>Volunteering Tile</b></u> 
+            <br/>
+            High School Soccer Field Cleanup
+            <br/>
+            <br/>
+            <u><b>Company</b></u>
+            <br/>
+            Marian High School
+            <br/>
+            <br/>
+            <u><b>Volunteering Type</b></u> 
+            <br/>
+            In person
+            <br/>
+            <br/>
+            <u><b>Description</b></u> 
+            <br/>
+            Come help up us cleanup the soccer field to prepare for the annual state championship !!! The annual state championship is a tournement held to see which team is best in the nation
+            <br/>
+            <br/>
+            <a href="test.html"><button type="button" class="btn btn-primary">Apply</button></a>
+           </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+  </body>
+</html>

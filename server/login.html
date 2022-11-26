@@ -1,22 +1,40 @@
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="module" src="../SOEN343_CommunityApp/server/jobForm.js">
-    </script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-    rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
     />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function login() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            if (username === "imran" && password === "soen343") {
+              document.getElementById("message").innerHTML = "Welcome back Imran !!!";
+              localStorage.setItem("LoggedIn", 1);
+            } else if (username === "employer" && password === "soen343") {
+              document.getElementById("message").innerHTML = "Welcome back Employer !!!";
+              localStorage.setItem("LoggedIn", 2);
+            } else if (username === "" || password === "") {
+              document.getElementById("message").innerHTML =
+                "Login unsucesfull. Please try again";
+            } else {
+              document.getElementById("message").innerHTML = "Wrong Credentials";
+            }
+        }
 
-    <script type="module" src="../SOEN343_CommunityApp/server/retrieveData.js">
+          function logout() {
+            document.getElementById("message").innerHTML = "Logged Out";
+            localStorage.setItem("LoggedIn", 0);
+        }
     </script>
-    <title>Apply</title>
-</head>
-<style>
+    <title>Login</title>
+  </head>
+  <style>
     form {
         border: 2px solid;
         width: 30%;
@@ -27,8 +45,7 @@
         text-align: center;
     }
   </style>
-
-<body>
+  <body>
     <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
           
@@ -56,7 +73,6 @@
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="viewresume.html">View Resume</a>
               </li>
-             
               
               
             </form>
@@ -64,66 +80,32 @@
         </div>
       </nav>
     </br>
-
-    <form action="jobForm.php" method="post">
-
-
-        <h3>Apply Today</h3>
+    </br>
+    <div id="message"></div>
+    <form>
+    <h3>Login</h3>
     <br/>
       <div class="mb-3">
-        <u><b>First Name</b></u> 
+        <u><b>Username</b></u> 
         <input
-          type="text"
+          type="name"
           class="form-control"
-          name="fname"
+          id="username"
         />
       </div>
       <div class="mb-3">
-        <u><b>Last Name</b></u> 
+        <u><b>Password</b></u> 
         <input
-          type="text"
+          type="password"
           class="form-control"
-          name="lname"
+          id="password"
         />
       </div>
-      <div class="mb-3">
-        <u><b>Email</b></u> 
-        <input
-          type="email"
-          class="form-control"
-          name="email"
-        />
-      </div>
-      <div class="mb-3">
-        <u><b>Age</b></u> 
-        <input
-          type="text"
-          class="form-control"
-          name="age"
-        />
-      </div>
-      <div class="mb-3">
-        <u><b>Job Title</b></u> 
-        <input
-          type="text"
-          class="form-control"
-          name="jobTitle"
-        />
-      </div>
-      <div class="mb-3">
-        <u><b>Resume</b></u> 
-        <input
-          type="text"
-          class="form-control"
-          resume="resume"
-        />
-      </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="button" class="btn btn-primary" onclick="login();">Login</button>
         </br>
-
-
-
+    </br>
+      <button type="button" class="btn btn-danger" onclick="logout();">Logout</button>
 
     </form>
-
+  </body>
 </html>

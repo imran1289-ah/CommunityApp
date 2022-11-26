@@ -1,28 +1,5 @@
-let jobForm = {
-    "jobs": [{
-            "fname": "admin",
-            "lname": "admin",
-            "email": "admin@admin.com",
-            "age": "22",
-            "jobTitle": "xzf",
-            "resume": "resume.pdf"
-
-        },
-        {
-            "fname": "admin",
-            "lname": "admin",
-            "email": "admin@admin.com",
-            "age": "22",
-            "jobTitle": "xzf",
-            "resume": "resume.pdf"
-
-        }
-
-    ]
-}
-
-foreach(job in jobForm)
-    document.createElement("p").appendChild(job);
+fetch("http://127.0.0.1:5500/jobForm.json").then((response) => response.json())
+    .then((json) => console.log(json)); 
 
 
 

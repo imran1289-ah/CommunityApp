@@ -22,6 +22,14 @@
             "age": "22",
             "jobTitle": "SDE",
             "resume": "resume_new.pdf"
+        },
+        {
+            "fname": "Kunal",
+            "lname": "Shah",
+            "email": "kunalshah606@gmail.com",
+            "age": "22",
+            "jobTitle": "SDE",
+            "resume": null
         }
     ]
 }

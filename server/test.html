@@ -1,95 +1,102 @@
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="module" src="../SOEN343_CommunityApp/server/jobForm.js">
+        </script>
+        <!--Importing Bootstrap 5.2.3-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="module" src="../SOEN343_CommunityApp/server/jobForm.js">
-    </script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!--Importing js function-->
+        <script type="module" src="../SOEN343_CommunityApp/server/retrieveData.js">
+        </script>
 
-    <script type="module" src="../SOEN343_CommunityApp/server/retrieveData.js">
-    </script>
-    <title>Apply</title>
-</head>
-<style>
-    form {
-        border: 2px solid;
-        width: 30%;
-        margin: 0 auto;
-        background-color: #f8f9fa;
-    }
+        <!--Function to verify if user has access to viewresume.html-->
+        <script>
+            function isEmployer(){
+                let condition = localStorage.getItem("LoggedIn");
+                if (condition == 2){
+                    window.location.href = "viewresume.html"
+                }
+                else{
+                    alert("You are not authorized to access this");
+                }
+            }
+        </script>
+        <title>Apply</title>
+    </head>
     
-    body {
-        text-align: center;
-    }
-</style>
+    <!--CSS styling for the page-->
+    <style>
+        form {
+            border: 2px solid;
+            width: 30%;
+            margin: 0 auto;
+            background-color: #f8f9fa;
+        }
+        
+        body {
+            text-align: center;
+        }
+    </style>
 
-<body>
-    <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid">
-
-            <a class="navbar-brand" href="#"><img src="https://e7.pngegg.com/pngimages/744/159/png-clipart-round-multi-color-logo-color-wheel-computer-icons-rgb-color-space-colour-logo-color.png" alt="Bootstrap" width="30" height="24">Social Community Platform</a>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="login.html">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Jobs and Volunteering Oppurtunities</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="viewresume.html">View Resume</a>
-                    </li>
-
-
-
-                    </form>
+    <body>
+        <!--Bootstrap 5.2 Navbar-->
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="https://e7.pngegg.com/pngimages/744/159/png-clipart-round-multi-color-logo-color-wheel-computer-icons-rgb-color-space-colour-logo-color.png" alt="Bootstrap" width="30" height="24">Social Community Platform</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="login.html">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Jobs and Volunteering Oppurtunities</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" onclick="isEmployer()" >View Resume</a>
+                        </li>
+                </div>
             </div>
-        </div>
-    </nav>
-    </br>
-
-    <form action="jobForm.php" method="post">
-
-
-        <h3>Apply Today</h3>
-        <br/>
-        <div class="mb-3">
-            <u><b>First Name</b></u>
-            <input type="text" class="form-control" name="fname" />
-        </div>
-        <div class="mb-3">
-            <u><b>Last Name</b></u>
-            <input type="text" class="form-control" name="lname" />
-        </div>
-        <div class="mb-3">
-            <u><b>Email</b></u>
-            <input type="email" class="form-control" name="email" />
-        </div>
-        <div class="mb-3">
-            <u><b>Age</b></u>
-            <input type="text" class="form-control" name="age" />
-        </div>
-        <div class="mb-3">
-            <u><b>Job Title</b></u>
-            <input type="text" class="form-control" name="jobTitle" />
-        </div>
-        <div class="mb-3">
-            <u><b>Resume</b></u>
-            <input type="text" class="form-control" resume="resume" />
-        </div>
-        <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+        </nav>
         </br>
 
-
-
-
-    </form>
-
+        <!--User job application form-->
+        <form action="jobForm.php" method="post" onsubmit="alert('form submitted succesfully')">
+            <h3>Apply Today</h3>
+            <div id="message"></div>
+            <br/>
+                <!--Bootstrap 5.2 login form-->
+                <div class="mb-3">
+                    <u><b>First Name</b></u>
+                    <input type="text" class="form-control" name="fname" />
+                </div>
+                <div class="mb-3">
+                    <u><b>Last Name</b></u>
+                    <input type="text" class="form-control" name="lname" />
+                </div>
+                <div class="mb-3">
+                    <u><b>Email</b></u>
+                    <input type="email" class="form-control" name="email" />
+                </div>
+                <div class="mb-3">
+                    <u><b>Age</b></u>
+                    <input type="text" class="form-control" name="age" />
+                </div>
+                <div class="mb-3">
+                    <u><b>Job Title</b></u>
+                    <input type="text" class="form-control" name="jobTitle" />
+                </div>
+                <div class="mb-3">
+                    <u><b>Resume</b></u>
+                    <input type="text" class="form-control" name="resume" />
+                </div>
+                <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+                </br>
+        </form>
 </html>

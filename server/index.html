@@ -4,11 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!--Importing Bootstrapt 5.2-->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!--Function to verify if user has access to viewresume.html-->
     <script>
       function isEmployer(){
         let condition = localStorage.getItem("LoggedIn");
@@ -20,17 +24,33 @@
         }
       }
     </script>
+
+    <!--Function to verify if user has access to test.html-->
+    <script>
+      function isUser(){
+        let condition = localStorage.getItem("LoggedIn");
+        if (condition == 1){
+          window.location.href = "test.html"
+        }
+        else{
+          alert("You are not authorized to access this");
+        }
+      }
+    </script>
     <title>Home Page</title>
   </head>
+  
+  <!--CSS style for the page-->
   <style>
     h1 {text-align: center;}
   </style>
+  
   <body>
+    
+    <!--Bootstrapt 5.2 navbar-->
     <nav class="navbar navbar-expand-lg bg-light">
       <div class="container-fluid">
-        
         <a class="navbar-brand" href="#"><img src="https://e7.pngegg.com/pngimages/744/159/png-clipart-round-multi-color-logo-color-wheel-computer-icons-rgb-color-space-colour-logo-color.png" alt="Bootstrap" width="30" height="24">Social Community Platform</a>
-
         <button
           class="navbar-toggler"
           type="button"
@@ -52,18 +72,19 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link active" aria-current="page" onclick="isEmployer();">View Resume</a>
-              </li>
-            
-            
-          </form>
+            </li>
         </div>
       </div>
     </nav>
+
+    
     <h1>Job and Volunteering Section</h1>
     <br/>
     
+    <!--Bootstrap 5.2 gutters -->
     <div class="container px-4 text-center">
         <div class="row gx-5">
+          <!--Displaying details of first Job-->
           <div class="col">
            <div class="p-3 border bg-light">
             <img src="https://png.pngtree.com/png-clipart/20220726/original/pngtree-letter-m-logo-png-png-image_8412439.png" alt="Blueworks" width="30" height="30">
@@ -88,13 +109,13 @@
             The candiate will help build the Marian High School Website. Candidate is expected to have good skills in HTML,CSS and JavaScript.
             <br/>
             <br/>
-            <a href="test.html"><button type="button" class="btn btn-primary">Apply</button></a>
+            <a onCLick="isUser();"><button type="button" class="btn btn-primary">Apply</button></a>
            </div>
-           
           </div>
+          
+          <!--Displaying deatils of volunteering position-->
           <div class="col">
-           
-            <div class="p-3 border bg-light">
+           <div class="p-3 border bg-light">
             <img src="https://png.pngtree.com/png-clipart/20220726/original/pngtree-letter-m-logo-png-png-image_8412439.png" alt="Marian" width="30" height="30">
             <br/>
             <u><b>Volunteering Tile</b></u> 
@@ -117,12 +138,11 @@
             Come help up us cleanup the soccer field to prepare for the annual state championship !!! The annual state championship is a tournement held to see which team is best in the nation
             <br/>
             <br/>
-            <a href="test.html"><button type="button" class="btn btn-primary">Apply</button></a>
+            <a onclick="isUser();"><button type="button" class="btn btn-primary">Apply</button></a>
            </div>
-            </div>
           </div>
-          
         </div>
       </div>
+    </div>
   </body>
 </html>

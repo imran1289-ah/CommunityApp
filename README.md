@@ -18,7 +18,7 @@ The objectives of this project is to build the complete architecture of the syst
 ## Team members
 - Imran Ahmed @[imran1289-ah](https://github.com/imran1289-ah) 
 - Kunal Shah @[Kunal22shah](https://github.com/Kunal22shah) 
-- Rohan Das @[DasDeveloper](github.com/DasDeveloper) 
+- Rohan Das @[DasDeveloper](https://github.com/DasDeveloper) 
 - Joe El-Khoury @[Aboudik1452](https://github.com/Aboudik1452) 
 - Ali Alp Erdinc @[AlpErdinc](https://github.com/AlpErdinc) 
 - Arsany Fahmy @[Arsollo](https://github.com/Arsollo)  

@@ -4,7 +4,7 @@
 This project is a Community App which allows teenagers and young adult get involved with their community. The application will allow users to sign up for different types of services such as signing up for activities, signing up for social events, applying for jobs etc.
 
 ## Objective
-The objectives of this project is to build the complete architecture of the system. The architecture and the diagrams that will be generated will be used in the implementation/coding phase.In the first phase, a proposal of the application was done. In the second phase, system architecture, use case scenarios and diagrams, sequence diagrams, class diagrams with gang of four patterns were generated. In the third phase, a mockup of the application using figma was made and a mockup implementation of one of the seqeuence diagrams was also made using HTML, CSS, JavaScript and PHP
+The objectives of this project is to build the complete architecture of the system. The architecture and the diagrams that will be generated will be used in the implementation/coding phase.In the first phase, a proposal of the application was done. In the second phase, system architecture, use case scenarios and diagrams, sequence diagrams, class diagrams with gang of four patterns were generated. In the third phase, a mockup of the application using figma was made and a mockup implementation of one of the seqeuence diagrams was also made using HTML, CSS, JavaScript and PHP (server folder)
 
 ## Tools
 - Draw IO
